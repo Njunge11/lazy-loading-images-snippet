@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+      integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+      crossorigin="anonymous"
+    />
+    <title>Lazy loading</title>
+  </head>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Anton");
+
+    .jumbotron {
+      background-color: #ffffff;
+    }
+    h1 {
+      font-size: 72px;
+      font-family: "Anton", sans-serif;
+    }
+    p {
+      font-size: 26px;
+      font-family: "Anton", sans-serif;
+    }
+    .center-vertically {
+      /* background: black;
+        color: white; */
+      /* border-radius: 1em; */
+      padding: 1em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+  <body>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-fluid" src="images/applemusic.jpg" />
+          </div>
+          <div class="col-md-8">
+            <div class="center-vertically ">
+              <h1>The best Hip Hop and R&B albums of 2018</h1>
+              <p>
+                A rundown of the best 10 Hip Hop albums and best 10 R&B albums
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Top 10 hip Hop Albums in 2018</h1>
+            </div>
+        </div>
+      <div class="row">
+        <div class="col">
+          <div class="card bg-dark text-white">
+            <img
+              src="images/astroworld.jpg"
+              class="card-image img-fluid"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+          <div class="card bg-dark text-white">
+            <img
+              src="images/astroworld.jpg"
+              class="card-image img-fluid"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="col">
+                <div class="card bg-dark text-white">
+                  <img
+                    src="images/astroworld.jpg"
+                    class="card-image img-fluid"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="col">
+                <div class="card bg-dark text-white">
+                  <img
+                    src="images/astroworld.jpg"
+                    class="card-image img-fluid"
+                    alt=""
+                  />
+                </div>
+              </div>
+      </div>
+    </div>
+    <script type="module" src="app.js"></script>
+    <script></script>
+  </body>
+</html>
