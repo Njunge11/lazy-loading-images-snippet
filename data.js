@@ -11,8 +11,8 @@ export default {
       image: "iamiwas.jpg"
     },
     {
-      albumTitle: "",
-      artist: "",
+      albumTitle: "Invasion Of Privacy",
+      artist: "Cardi B",
       image: "iop.jpg	"
     },
     {
@@ -27,7 +27,7 @@ export default {
     },
     {
       albumTitle: "Scorpion",
-      artist: "Darake",
+      artist: "Drake",
       image: "scorpion.jpg"
     },
     {
@@ -36,9 +36,9 @@ export default {
       image: "victory.jpg	"
     },
     {
-      albumTitle: "Daytona",
-      artist: "Pusha T",
-      image: "daytona.jpg	"
+      albumTitle: "There You Have It",
+      artist: "Reason",
+      image: "reason.jpg	"
     },
     {
       albumTitle: "Championships",
@@ -59,9 +59,9 @@ export default {
       image: "oxnard.jpg"
     },
     {
-      albumTitle: "Dirty Computer",
-      artist: "Janelle Money",
-      image: "dirty_computer.jpeg"
+      albumTitle: "lost & found",
+      artist: "Jorja Smith",
+      image: "js.jpg"
     },
     {
       albumTitle: "My Dear Melancholy",
@@ -81,22 +81,22 @@ export default {
     {
       albumTitle: "Dancing Shadows",
       artist: "Mario",
-      image: "ds.jpeg	"
+      image: "shadows.jpeg"
     },
     {
-      albumTitle: "4275",
-      artist: "Jacquees",
-      image: "4275.jpg"
+      albumTitle: "Man Of The Woods",
+      artist: "Justin Timberlake",
+      image: "man.jpg"
     },
     {
-      albumTitle: "Everything is love",
-      artist: "The Carters",
-      image: "everything.jpeg"
+      albumTitle: "Blood Orange",
+      artist: "Negro Swan",
+      image: "blood.jpg"
     },
     {
-      albumTitle: "Sweetener",
-      artist: "Ariana Grande",
-      image: "sweeterner.jpg"
+      albumTitle: "Suncity",
+      artist: "Khalid",
+      image: "khalid.jpeg"
     },
     {
       albumTitle: "Scorpion",
