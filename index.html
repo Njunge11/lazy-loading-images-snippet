@@ -25,6 +25,9 @@
       font-size: 72px;
       font-family: "Anton", sans-serif;
     }
+    h2 {
+      font-family: "Anton", sans-serif;
+    }
     p {
       font-size: 26px;
       font-family: "Anton", sans-serif;
@@ -40,8 +43,38 @@
       margin-right: -50%;
       transform: translate(-50%, -50%);
     }
+
+    .col-3 {
+      margin-bottom: 2rem;
+    }
+    /* .hip-hop,
+    .rnb {
+      margin-bottom: 2rem;
+    } */
+    .title {
+      margin-top: 10px;
+    }
+    .artist {
+      color:#afacac;
+    }
+    .title,
+    .artist {
+      margin-bottom: 0;
+      font-size: 16px;
+      font-weight: 200;
+    }
+    hr {
+      border-top: 8px solid rgba(0, 0, 0, 0.9);
+    }
+    .card {
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    .card-body {
+      padding: 5rem;
+    }
   </style>
   <body>
+    <!-- Jumotron start-->
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
         <div class="row">
@@ -59,52 +92,39 @@
         </div>
       </div>
     </div>
+    <!-- Jumbotron end !-->
 
+    <!-- Top hip hop container start -->
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="text-center">Top 10 hip Hop Albums in 2018</h1>
+      <div class="card">
+        <div class="card-body">
+          <div class="row hip-hop">
+            <div class="col-md-6 mx-auto">
+              <h2 class="text-center">Top 10 Hip Hop Albums in 2018</h2>
+              <hr />
             </div>
-        </div>
-      <div class="row">
-        <div class="col">
-          <div class="card bg-dark text-white">
-            <img
-              src="images/astroworld.jpg"
-              class="card-image img-fluid"
-              alt=""
-            />
           </div>
+          <div class="row" id="hip-hop"></div>
         </div>
-        <div class="col">
-          <div class="card bg-dark text-white">
-            <img
-              src="images/astroworld.jpg"
-              class="card-image img-fluid"
-              alt=""
-            />
-          </div>
-        </div>
-        <div class="col">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/astroworld.jpg"
-                    class="card-image img-fluid"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="col">
-                <div class="card bg-dark text-white">
-                  <img
-                    src="images/astroworld.jpg"
-                    class="card-image img-fluid"
-                    alt=""
-                  />
-                </div>
-              </div>
       </div>
     </div>
+    <!-- Top hip hop container end-->
+
+    <!-- Top r&b container start-->
+    <div class="container" style="margin-top:5rem; margin-bottom:5rem;">
+      <div class="card">
+        <div class="card-body">
+          <div class="row rnb">
+            <div class="col-md-6 mx-auto">
+              <h2 class="text-center">Top 10 R&B albums in 2018</h2>
+              <hr />
+            </div>
+          </div>
+          <div class="row" id="rnb"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Top r&nb container end-->
     <script type="module" src="app.js"></script>
     <script></script>
   </body>
