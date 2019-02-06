@@ -43,11 +43,7 @@ export default {
     {
       albumTitle: "Championships",
       artist: "Meek Mill",
-<<<<<<< HEAD
       image: "championships.jpg"
-=======
-      image: "championships.jpeg"
->>>>>>> d09e3ccecc715d314d7bfa68e61220b5775b372f
     },
     {
       albumTitle: "Astroworld",
@@ -85,11 +81,7 @@ export default {
     {
       albumTitle: "Dancing Shadows",
       artist: "Mario",
-<<<<<<< HEAD
       image: "shadows.jpg"
-=======
-      image: "shadows.jpeg"
->>>>>>> d09e3ccecc715d314d7bfa68e61220b5775b372f
     },
     {
       albumTitle: "Man Of The Woods",
@@ -104,11 +96,7 @@ export default {
     {
       albumTitle: "Suncity",
       artist: "Khalid",
-<<<<<<< HEAD
       image: "khalid.jpg"
-=======
-      image: "khalid.jpeg"
->>>>>>> d09e3ccecc715d314d7bfa68e61220b5775b372f
     },
     {
       albumTitle: "Scorpion",

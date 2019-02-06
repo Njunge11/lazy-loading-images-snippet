@@ -14,17 +14,12 @@ class LazyloadImages {
            <div class="col-3">
           <div class="card bg-dark text-white">
             <img
-<<<<<<< HEAD
             class ="lazy"
               src=${"images-poor-quality/" + albums[album].image}
               data-src=${"images-small/" + albums[album].image}
               data-srcset=${"images-small/" + albums[album].image}
               class="card-image img-fluid"
               width="100%"
-=======
-              src=${"images/" + albums[album].image}
-              class="card-image img-fluid"
->>>>>>> d09e3ccecc715d314d7bfa68e61220b5775b372f
               alt=""
             />
           </div>
@@ -38,7 +33,6 @@ class LazyloadImages {
     root.innerHTML = markup;
   }
 
-<<<<<<< HEAD
   lazyloadImages() {
     document.addEventListener("DOMContentLoaded", function() {
       var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
@@ -68,14 +62,8 @@ class LazyloadImages {
       }
     });
   }
-=======
-  lazyloadImages() {}
->>>>>>> d09e3ccecc715d314d7bfa68e61220b5775b372f
 }
 const lazyLoad = new LazyloadImages();
 lazyLoad.renderAlbums("hip-hop");
 lazyLoad.renderAlbums("rnb");
-<<<<<<< HEAD
 lazyLoad.lazyloadImages();
-=======
->>>>>>> d09e3ccecc715d314d7bfa68e61220b5775b372f
