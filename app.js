@@ -1,3 +1,7 @@
+/**
+ * Copyright(c) 2019 Njunge Njenga.
+ * MIT Licensed
+ */
 import data from "./data.js";
 class LazyloadImages {
   constructor() {
@@ -5,6 +9,10 @@ class LazyloadImages {
     this.rnbAlbums = data.rnbAlbums;
   }
 
+  /**
+   * whichAnimationEvent
+   * * Detect when the animation has ended.
+   */
   whichAnimationEvent() {
     let t;
     let el = document.createElement("fakelement");
@@ -20,7 +28,11 @@ class LazyloadImages {
       }
     }
   }
-
+  /**
+   * animateJumbotronContents
+   * * Animate and control the sequencing of the contents in the jumbotron i.e the image, title and descriptions.
+   *
+   */
   animateJumbotronContents() {
     const jumbotronImage = document.querySelector(".jumbotron-img");
     const jumbotronTitle = document.querySelector(".jumbotron-title");
@@ -29,7 +41,6 @@ class LazyloadImages {
     jumbotronImage.addEventListener(animationEvent, animateJumbotronTitle);
     function animateJumbotronTitle() {
       jumbotronImage.removeEventListener(animationEvent, animateJumbotronTitle);
-      console.log("the animation has ended");
       jumbotronTitle.style.display = "block";
       jumbotronTitle.classList.add("animated");
       jumbotronTitle.classList.add("slideInRight");
@@ -40,10 +51,15 @@ class LazyloadImages {
         jumbotronDesc.classList.add("animated");
         jumbotronDesc.classList.add("fadeInUp");
         jumbotronDesc.classList.add("fast");
-        jumbotronDesc.addEventListener(animationEvent, animateJumbotronDec);
       }
     }
   }
+
+  /**
+   *  renderAlbums
+   * * Renders the album info on the web page i.e album cover, title and artist.
+   * @param {*} id The id of the div which we will append the album info to.
+   */
   renderAlbums(id) {
     const albums = id === "hip-hop" ? this.hipHopAlbums : this.rnbAlbums;
     const root = document.querySelector("#" + id);
@@ -73,6 +89,11 @@ class LazyloadImages {
     root.innerHTML = markup;
   }
 
+  /**
+   *  lazyLoadImages
+   * * Use the Intersection Observer API to lazy load images.
+   *
+   */
   lazyloadImages() {
     document.addEventListener("DOMContentLoaded", function() {
       var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
