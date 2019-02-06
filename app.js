@@ -12,6 +12,7 @@ class LazyloadImages {
   /**
    * whichAnimationEvent
    * * Detect when the animation has ended.
+   * TODO: Change variable names.
    */
   whichAnimationEvent() {
     let t;
@@ -31,7 +32,7 @@ class LazyloadImages {
   /**
    * animateJumbotronContents
    * * Animate and control the sequencing of the contents in the jumbotron i.e the image, title and descriptions.
-   * TODO: Find a way to refactor this
+   * TODO: Find a way to refactor this.
    */
   animateJumbotronContents() {
     const jumbotronImage = document.querySelector(".jumbotron-img");
@@ -58,7 +59,7 @@ class LazyloadImages {
   /**
    *  renderAlbums
    * * Renders the album info on the web page i.e album cover, title and artist.
-   * @param {*} id The id of the div which we will append the album info to.
+   * @param id The id of the div which we will append the album info to.
    */
   renderAlbums(id) {
     const albums = id === "hip-hop" ? this.hipHopAlbums : this.rnbAlbums;
