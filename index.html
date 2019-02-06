@@ -13,6 +13,10 @@
       integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
       crossorigin="anonymous"
     />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    /> -->
     <title>Lazy loading</title>
   </head>
   <style>
@@ -20,6 +24,10 @@
 
     .jumbotron {
       background-color: #ffffff;
+    }
+    .jumbotron-title,
+    .jumbotron-desc {
+      display: none;
     }
     h1 {
       font-size: 72px;
@@ -55,7 +63,7 @@
       margin-top: 10px;
     }
     .artist {
-      color:#afacac;
+      color: #afacac;
     }
     .title,
     .artist {
@@ -72,6 +80,113 @@
     .card-body {
       padding: 5rem;
     }
+
+    .animated.slow {
+      -webkit-animation-duration: 2s;
+      animation-duration: 2s;
+    }
+    .animated.fast {
+      -webkit-animation-duration: 0.8s;
+      animation-duration: 0.8s;
+    }
+    .animated {
+      -webkit-animation-duration: 1s;
+      -webkit-animation-fill-mode: both;
+      animation-duration: 1s;
+      animation-fill-mode: both;
+    }
+    .slideInLeft {
+      -webkit-animation-name: slideInLeft;
+      animation-name: slideInLeft;
+    }
+    .slideInRight {
+      -webkit-animation-name: slideInRight;
+      animation-name: slideInRight;
+    }
+    .fadeInUp {
+      -webkit-animation-name: fadeInUp;
+      animation-name: fadeInUp;
+    }
+
+    @-webkit-keyframes slideInLeft {
+      0% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+      }
+
+      to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      0% {
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        visibility: visible;
+      }
+
+      to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+    }
+
+    @-webkit-keyframes slideInRight {
+      0% {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+      }
+
+      to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      0% {
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+        visibility: visible;
+      }
+
+      to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+      }
+    }
+
+    @-webkit-keyframes fadeInUp {
+      0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+
+      to {
+        -webkit-transform: translateZ(0);
+        opacity: 1;
+        transform: translateZ(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        -webkit-transform: translate3d(0, 100%, 0);
+        opacity: 0;
+        transform: translate3d(0, 100%, 0);
+      }
+
+      to {
+        -webkit-transform: translateZ(0);
+        opacity: 1;
+        transform: translateZ(0);
+      }
+    }
   </style>
   <body>
     <!-- Jumotron start-->
@@ -79,12 +194,17 @@
       <div class="container">
         <div class="row">
           <div class="col-md-4">
-            <img class="img-fluid" src="images-small/applemusic.jpg" />
+            <img
+              class="jumbotron-img img-fluid animated slideInLeft slow"
+              src="images-small/applemusic.jpg"
+            />
           </div>
           <div class="col-md-8">
-            <div class="center-vertically ">
-              <h1>The best Hip Hop and R&B albums of 2018</h1>
-              <p>
+            <div class="center-vertically">
+              <h1 class="jumbotron-title">
+                The best Hip Hop and R&B albums of 2018
+              </h1>
+              <p class="jumbotron-desc">
                 A rundown of the best 10 Hip Hop albums and best 10 R&B albums
               </p>
             </div>

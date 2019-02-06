@@ -4,6 +4,46 @@ class LazyloadImages {
     this.hipHopAlbums = data.hipHopAlbums;
     this.rnbAlbums = data.rnbAlbums;
   }
+
+  whichAnimationEvent() {
+    let t;
+    let el = document.createElement("fakelement");
+    let animations = {
+      animation: "animationend",
+      OAnimation: "oAnimationend",
+      MozAnimation: "animationend",
+      WebkitAnimation: "webkitAnimationEnd"
+    };
+    for (t in animations) {
+      if (el.style[t] !== undefined) {
+        return animations[t];
+      }
+    }
+  }
+
+  animateJumbotronContents() {
+    const jumbotronImage = document.querySelector(".jumbotron-img");
+    const jumbotronTitle = document.querySelector(".jumbotron-title");
+    const jumbotronDesc = document.querySelector(".jumbotron-desc");
+    const animationEvent = this.whichAnimationEvent();
+    jumbotronImage.addEventListener(animationEvent, animateJumbotronTitle);
+    function animateJumbotronTitle() {
+      jumbotronImage.removeEventListener(animationEvent, animateJumbotronTitle);
+      console.log("the animation has ended");
+      jumbotronTitle.style.display = "block";
+      jumbotronTitle.classList.add("animated");
+      jumbotronTitle.classList.add("slideInRight");
+      jumbotronTitle.classList.add("fast");
+      jumbotronTitle.addEventListener(animationEvent, animateJumbotronDec);
+      function animateJumbotronDec() {
+        jumbotronDesc.style.display = "block";
+        jumbotronDesc.classList.add("animated");
+        jumbotronDesc.classList.add("fadeInUp");
+        jumbotronDesc.classList.add("fast");
+        jumbotronDesc.addEventListener(animationEvent, animateJumbotronDec);
+      }
+    }
+  }
   renderAlbums(id) {
     const albums = id === "hip-hop" ? this.hipHopAlbums : this.rnbAlbums;
     const root = document.querySelector("#" + id);
@@ -66,4 +106,5 @@ class LazyloadImages {
 const lazyLoad = new LazyloadImages();
 lazyLoad.renderAlbums("hip-hop");
 lazyLoad.renderAlbums("rnb");
+lazyLoad.animateJumbotronContents();
 lazyLoad.lazyloadImages();
