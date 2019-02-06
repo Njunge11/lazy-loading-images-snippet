@@ -43,7 +43,7 @@ export default {
     {
       albumTitle: "Championships",
       artist: "Meek Mill",
-      image: "championships.jpeg"
+      image: "championships.jpg"
     },
     {
       albumTitle: "Astroworld",
@@ -81,7 +81,7 @@ export default {
     {
       albumTitle: "Dancing Shadows",
       artist: "Mario",
-      image: "shadows.jpeg"
+      image: "shadows.jpg"
     },
     {
       albumTitle: "Man Of The Woods",
@@ -96,7 +96,7 @@ export default {
     {
       albumTitle: "Suncity",
       artist: "Khalid",
-      image: "khalid.jpeg"
+      image: "khalid.jpg"
     },
     {
       albumTitle: "Scorpion",
