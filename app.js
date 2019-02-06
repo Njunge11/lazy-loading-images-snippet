@@ -31,7 +31,7 @@ class LazyloadImages {
   /**
    * animateJumbotronContents
    * * Animate and control the sequencing of the contents in the jumbotron i.e the image, title and descriptions.
-   *
+   * TODO: Find a way to refactor this
    */
   animateJumbotronContents() {
     const jumbotronImage = document.querySelector(".jumbotron-img");
@@ -92,7 +92,7 @@ class LazyloadImages {
   /**
    *  lazyLoadImages
    * * Use the Intersection Observer API to lazy load images.
-   *
+   * TODO: Implement a fallback for browsers that do not support the API.
    */
   lazyloadImages() {
     document.addEventListener("DOMContentLoaded", function() {
