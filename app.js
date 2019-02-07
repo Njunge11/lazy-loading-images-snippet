@@ -89,44 +89,8 @@ class LazyloadImages {
   `;
     root.innerHTML = markup;
   }
-
-  /**
-   *  lazyLoadImages
-   * * Use the Intersection Observer API to lazy load images.
-   * TODO: Implement a fallback for browsers that do not support the API.
-   */
-  lazyloadImages() {
-    document.addEventListener("DOMContentLoaded", function() {
-      var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-      if (
-        "IntersectionObserver" in window &&
-        "IntersectionObserverEntry" in window &&
-        "intersectionRatio" in window.IntersectionObserverEntry.prototype
-      ) {
-        let lazyImageObserver = new IntersectionObserver(function(
-          entries,
-          observer
-        ) {
-          entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-              let lazyImage = entry.target;
-              lazyImage.src = lazyImage.dataset.src;
-              lazyImage.srcset = lazyImage.dataset.srcset;
-              lazyImage.classList.remove("lazy");
-              lazyImageObserver.unobserve(lazyImage);
-            }
-          });
-        });
-
-        lazyImages.forEach(function(lazyImage) {
-          lazyImageObserver.observe(lazyImage);
-        });
-      }
-    });
-  }
 }
 const lazyLoad = new LazyloadImages();
 lazyLoad.renderAlbums("hip-hop");
 lazyLoad.renderAlbums("rnb");
 lazyLoad.animateJumbotronContents();
-lazyLoad.lazyloadImages();
