@@ -45,13 +45,13 @@ class LazyloadImages {
       jumbotronTitle.style.display = "block";
       jumbotronTitle.classList.add("animated");
       jumbotronTitle.classList.add("slideInRight");
-      jumbotronTitle.classList.add("fast");
+      jumbotronTitle.classList.add("faster");
       jumbotronTitle.addEventListener(animationEvent, animateJumbotronDec);
       function animateJumbotronDec() {
         jumbotronDesc.style.display = "block";
         jumbotronDesc.classList.add("animated");
         jumbotronDesc.classList.add("fadeInUp");
-        jumbotronDesc.classList.add("fast");
+        jumbotronDesc.classList.add("faster");
       }
     }
   }
@@ -72,7 +72,7 @@ class LazyloadImages {
           <div class="card bg-dark text-white">
             <img
             class ="lazy"
-              src=${"images-poor-quality/" + albums[album].image}
+              src=${"images/" + albums[album].image}
               data-src=${"images-small/" + albums[album].image}
               data-srcset=${"images-small/" + albums[album].image}
               class="card-image img-fluid"
@@ -121,4 +121,4 @@ const lazyLoad = new LazyloadImages();
 lazyLoad.renderAlbums("hip-hop");
 lazyLoad.renderAlbums("rnb");
 lazyLoad.animateJumbotronContents();
-lazyLoad.lazyLoadImages();
+// lazyLoad.lazyLoadImages();
